@@ -100,11 +100,7 @@ async def start(bot: Client, cmd: Message):
                     disable_web_page_preview=True
                 )
             else:
-             message_ids.append(int(GetMessage.id))
-            for i in range(len(message_ids)):
-                   await cmd.reply_text(f"")
-        except Exception as err:
-            await cmd.reply_text(f"")
+             try:
  
  
 
