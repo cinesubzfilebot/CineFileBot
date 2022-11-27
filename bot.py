@@ -99,11 +99,7 @@ async def start(bot: Client, cmd: Message):
                     quote=True,
                     disable_web_page_preview=True
                 )
-            else:
-                message_ids.append(int(GetMessage.id))
-
-
-
+ 
 
 @Bot.on_message((filters.document | filters.video | filters.audio) & ~filters.chat(Config.DB_CHANNEL))
 async def main(bot: Client, message: Message):
