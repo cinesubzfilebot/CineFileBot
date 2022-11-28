@@ -104,7 +104,7 @@ async def start(bot: Client, cmd: Message):
             for i in range(len(message_ids)):
                 await cmd.reply_text(f"")
         except Exception as err:
-            await cmd.reply_text(f"Movies With Sinhala Sub-CineSubz")
+            await cmd.reply_text(f"")
 
 
 @Bot.on_message((filters.document | filters.video | filters.audio) & ~filters.chat(Config.DB_CHANNEL))
@@ -128,7 +128,7 @@ async def main(bot: Client, message: Message):
             return
 
         await message.reply_text(
-            text="**CineSubz-Movies With SinhalaSub**",
+            text="",
             quote=True,
             disable_web_page_preview=True
         )
