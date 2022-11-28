@@ -99,7 +99,14 @@ async def start(bot: Client, cmd: Message):
                     quote=True,
                     disable_web_page_preview=True
                 )
-                
+            else:
+                message_ids.append(int(GetMessage.id))
+            for i in range(len(message_ids)):
+                await cmd.reply_text(f"CineSubz")
+        except Exception as err:
+            await cmd.reply_text(f"Movies With Sinhala Sub-CineSubz")
+
+
 @Bot.on_message((filters.document | filters.video | filters.audio) & ~filters.chat(Config.DB_CHANNEL))
 async def main(bot: Client, message: Message):
 
