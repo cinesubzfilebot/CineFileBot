@@ -128,9 +128,13 @@ async def main(bot: Client, message: Message):
             return
 
         await message.reply_text(
-            text="",
-            quote=False,
-            disable_web_page_preview=False
+            text="**Please Join Here 👇**",
+            reply_markup=InlineKeyboardMarkup([
+                [InlineKeyboardButton("🏆 Channel 🏆", url="https://t.me/CineSubzMovies")],
+                [InlineKeyboardButton("🗣 Group 🗣 ", url="https://t.me/CineSubzChatNew")]
+            ]),
+            quote=True,
+            disable_web_page_preview=True
         )
     elif message.chat.type == enums.ChatType.CHANNEL:
         if (message.chat.id == int(Config.LOG_CHANNEL)) or (message.chat.id == int(Config.UPDATES_CHANNEL)) or message.forward_from_chat or message.forward_from:
