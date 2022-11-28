@@ -129,8 +129,8 @@ async def main(bot: Client, message: Message):
 
         await message.reply_text(
             text="",
-            quote=True,
-            disable_web_page_preview=True
+            quote=False,
+            disable_web_page_preview=False
         )
     elif message.chat.type == enums.ChatType.CHANNEL:
         if (message.chat.id == int(Config.LOG_CHANNEL)) or (message.chat.id == int(Config.UPDATES_CHANNEL)) or message.forward_from_chat or message.forward_from:
