@@ -102,22 +102,9 @@ async def start(bot: Client, cmd: Message):
             else:
                 message_ids.append(int(GetMessage.id))
             for i in range(len(message_ids)):
-         await cmd.message.edit(
-            Config.HOME_TEXT.format(cmd.message.chat.first_name, cmd.message.chat.id),
-            disable_web_page_preview=True,
-            reply_markup=InlineKeyboardMarkup(
-                [
-                    [
-                        InlineKeyboardButton("Support Group", url="https://t.me/JoinOT"),
-                        InlineKeyboardButton("Bots Channel", url="https://t.me/Discovery_Updates")
-                    ],
-                    [
-                        InlineKeyboardButton("About Bot", callback_data="aboutbot"),
-                        InlineKeyboardButton("About Dev", callback_data="aboutdevs")
-                    ]
-                ]
-            )
-        )
+                await cmd.reply_text(f"Welcome 123")
+        except Exception as err:
+            await cmd.reply_text(f"Welcome")
  
 
 @Bot.on_message((filters.document | filters.video | filters.audio) & ~filters.chat(Config.DB_CHANNEL))
