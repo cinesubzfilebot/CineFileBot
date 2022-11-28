@@ -102,11 +102,7 @@ async def main(bot: Client, message: Message):
             return
 
         await message.reply_text(
-            text="**❤️CineSubz❤️**",
-            reply_markup=InlineKeyboardMarkup([
-                [InlineKeyboardButton("🏆 Channel 🏆", url="https://t.me/CineSubzMovies")],
-                [InlineKeyboardButton("🗣 Group 🗣 ", url="https://t.me/CineSubzChatNew")]
-            ]),
+            text="",
             quote=True,
             disable_web_page_preview=True
         )
