@@ -106,7 +106,7 @@ async def main(bot: Client, message: Message):
             return
 
         await message.reply_text(
-            text="**Please Join Here 👇**",
+            text="**❤️CineSubz❤️**",
             reply_markup=InlineKeyboardMarkup([
                 [InlineKeyboardButton("🏆 Channel 🏆", url="https://t.me/CineSubzMovies")],
                 [InlineKeyboardButton("🗣 Group 🗣 ", url="https://t.me/CineSubzChatNew")]
